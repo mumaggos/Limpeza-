@@ -352,7 +352,22 @@ export function Admin() {
                   {selectedLead.raw_data?.rooms && <p><strong>Quartos:</strong> {selectedLead.raw_data.rooms}</p>}
                   {selectedLead.raw_data?.bathrooms && <p><strong>Casas de Banho:</strong> {selectedLead.raw_data.bathrooms}</p>}
                   {selectedLead.raw_data?.frequency && <p><strong>Frequência:</strong> {selectedLead.raw_data.frequency}</p>}
-                  {selectedLead.raw_data?.pets && <p><strong>Animais de Estimação:</strong> {selectedLead.raw_data.pets}</p>}
+                  {selectedLead.raw_data?.pets !== undefined && <p><strong>Animais de Estimação:</strong> {selectedLead.raw_data.pets ? "Sim" : "Não"}</p>}
+                  
+                  {/* Novos Campos Específicos */}
+                  {selectedLead.raw_data?.fractions && <p><strong>Frações:</strong> {selectedLead.raw_data.fractions}</p>}
+                  {selectedLead.raw_data?.floors && <p><strong>Andares:</strong> {selectedLead.raw_data.floors}</p>}
+                  {selectedLead.raw_data?.elevator !== undefined && <p><strong>Elevador:</strong> {selectedLead.raw_data.elevator ? "Sim" : "Não"}</p>}
+                  {selectedLead.raw_data?.garage !== undefined && <p><strong>Garagem comum:</strong> {selectedLead.raw_data.garage ? "Sim" : "Não"}</p>}
+                  {selectedLead.raw_data?.exteriorArea !== undefined && <p><strong>Áreas Exteriores:</strong> {selectedLead.raw_data.exteriorArea ? "Sim" : "Não"}</p>}
+                  
+                  {selectedLead.raw_data?.hasFurniture !== undefined && <p><strong>Com mobília:</strong> {selectedLead.raw_data.hasFurniture ? "Sim" : "Não"}</p>}
+                  {selectedLead.raw_data?.hasDebris !== undefined && <p><strong>Com entulho:</strong> {selectedLead.raw_data.hasDebris ? "Sim" : "Não"}</p>}
+                  
+                  {selectedLead.raw_data?.quantity && <p><strong>Quantidade:</strong> {selectedLead.raw_data.quantity}</p>}
+                  {selectedLead.raw_data?.itemType && <p><strong>Tipo de Peças/Item:</strong> {selectedLead.raw_data.itemType}</p>}
+                  {selectedLead.raw_data?.deliveryPreference && <p><strong>Preferência de Entrega:</strong> {selectedLead.raw_data.deliveryPreference}</p>}
+                  {selectedLead.raw_data?.itemCondition && <p><strong>Estado/Manchas:</strong> {selectedLead.raw_data.itemCondition}</p>}
                   
                   {selectedLead.raw_data?.services && selectedLead.raw_data.services.length > 1 && (
                     <p><strong>Outros Serviços Incluídos:</strong> {selectedLead.raw_data.services.join(', ')}</p>

@@ -1,0 +1,93 @@
+--- src/components/quote/Step2Details.tsx
++++ src/components/quote/Step2Details.tsx
+@@ -218,24 +218,43 @@
+         {/* LAUNDRY LOGIC */}
+         {hasLaundry && (
+-          <div className="bg-blue-50 border border-blue-200 p-6 rounded-2xl">
+-            <h3 className="font-semibold text-blue-900 mb-4">Serviço de Lavandaria</h3>
+-            <div>
+-              <label className="block text-sm font-medium text-blue-900 mb-2">Quantidade aproximada</label>
+-              <input
+-                type="text"
+-                value={data.quantity || ""}
+-                onChange={(e) => updateData({ quantity: e.target.value })}
+-                placeholder="Ex: 2 sacos grandes de 50L ou 40 peças"
+-                className="w-full px-4 py-3 rounded-xl border border-blue-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+-              />
++          <div className="bg-blue-50 border border-blue-200 p-6 rounded-2xl space-y-6">
++            <h3 className="font-semibold text-blue-900">Serviço de Lavandaria</h3>
++            
++            <div>
++              <label className="block text-sm font-medium text-blue-900 mb-2">Que tipo de peças pretende tratar?</label>
++              <input
++                type="text"
++                value={data.itemType || ""}
++                onChange={(e) => updateData({ itemType: e.target.value })}
++                placeholder="Ex: Camisas, Lençóis, Toalhas, Roupa do dia a dia..."
++                className="w-full px-4 py-3 rounded-xl border border-blue-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
++              />
++            </div>
++            
++            <div>
++              <label className="block text-sm font-medium text-blue-900 mb-2">Quantidade aproximada</label>
++              <input
++                type="text"
++                value={data.quantity || ""}
++                onChange={(e) => updateData({ quantity: e.target.value })}
++                placeholder="Ex: Cerca de 40 peças, 2 sacos, etc."
++                className="w-full px-4 py-3 rounded-xl border border-blue-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
++              />
++            </div>
++
++            <div>
++              <label className="block text-sm font-medium text-blue-900 mb-2">Preferência de Entrega (Opcional)</label>
++              <input
++                type="text"
++                value={data.deliveryPreference || ""}
++                onChange={(e) => updateData({ deliveryPreference: e.target.value })}
++                placeholder="Ex: Dobrado, Engomado em cabides..."
++                className="w-full px-4 py-3 rounded-xl border border-blue-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
++              />
+             </div>
+           </div>
+         )}
+ 
+         {/* SOFAS/RUGS LOGIC */}
+         {hasSofas && (
+-          <div className="bg-emerald-50 border border-emerald-200 p-6 rounded-2xl">
+-            <h3 className="font-semibold text-emerald-900 mb-4">Limpeza de Sofás e Tapetes</h3>
+-            <div>
+-              <label className="block text-sm font-medium text-emerald-900 mb-2">O que pretende limpar?</label>
+-              <textarea
+-                value={data.itemType || ""}
+-                onChange={(e) => updateData({ itemType: e.target.value })}
+-                placeholder="Ex: 1 sofá de 3 lugares e 2 tapetes (2x2m)"
+-                rows={3}
+-                className="w-full px-4 py-3 rounded-xl border border-emerald-200 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
+-              />
++          <div className="bg-emerald-50 border border-emerald-200 p-6 rounded-2xl space-y-6">
++            <h3 className="font-semibold text-emerald-900">Limpeza de Sofás, Colchões e Vidros</h3>
++            
++            <div>
++              <label className="block text-sm font-medium text-emerald-900 mb-2">Descreva os itens (quantidade e tamanho)</label>
++              <textarea
++                value={data.itemType || ""}
++                onChange={(e) => updateData({ itemType: e.target.value })}
++                placeholder="Ex: 1 sofá com chaise longue, 1 colchão de casal, 4 janelas grandes."
++                rows={3}
++                className="w-full px-4 py-3 rounded-xl border border-emerald-200 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
++              />
++            </div>
++
++            <div>
++              <label className="block text-sm font-medium text-emerald-900 mb-2">Existe alguma mancha específica ou sujidade profunda? (Opcional)</label>
++              <input
++                type="text"
++                value={data.itemCondition || ""}
++                onChange={(e) => updateData({ itemCondition: e.target.value })}
++                placeholder="Ex: Nódoas de café, pelos de animais, humidade..."
++                className="w-full px-4 py-3 rounded-xl border border-emerald-200 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
++              />
+             </div>
+           </div>
+         )}
