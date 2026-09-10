@@ -1,0 +1,6 @@
+{
+  "name": "Pronta e Limpa",
+  "description": "Mais tempo para si. Nós tratamos da limpeza e da sua roupa. Serviços profissionais de limpeza e lavandaria, com recolha e entrega ao domicílio no Norte de Portugal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
