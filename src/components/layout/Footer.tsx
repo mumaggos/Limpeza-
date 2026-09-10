@@ -79,7 +79,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-neutral-800 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-neutral-500">
-          <p>&copy; {new Date().getFullYear()} {businessConfig.brandName}. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} {businessConfig.brandName}. Todos os direitos <Link to="/admin" className="hover:text-neutral-400">reservados.</Link></p>
         </div>
       </div>
     </footer>
