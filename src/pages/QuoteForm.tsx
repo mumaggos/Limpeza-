@@ -113,25 +113,9 @@ export function QuoteForm() {
           name: formData.name,
           phone: formData.phone,
           email: formData.email,
-          services: formData.services,
           service: formData.services[0], // primary service
-          property_type: formData.propertyType,
-          location: formData.location,
-          postal_code: formData.postalCode,
-          address: formData.address,
-          frequency: formData.frequency,
-          area: formData.area,
-          rooms: formData.rooms,
-          bathrooms: formData.bathrooms,
-          pets: formData.pets,
-          preferred_date: formData.preferredDate,
-          preferred_time: formData.preferredTime,
-          details: formData.details,
-          extras: formData.extras,
-          contact_preference: formData.contactPreference,
           status: 'Novo',
-          source: 'Website',
-          raw_data: formData // Capture all other specific fields
+          raw_data: formData // Capture all specific fields here
         }
       ]);
 
