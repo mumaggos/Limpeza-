@@ -137,6 +137,29 @@ export function QuoteForm() {
 
       if (error) throw error;
       
+      // Send Email Notification (Web3Forms)
+      const web3FormsKey = import.meta.env.VITE_WEB3FORMS_KEY;
+      if (web3FormsKey) {
+        try {
+          await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              access_key: web3FormsKey,
+              subject: `Novo Pedido: ${formData.services[0]} - ${formData.name}`,
+              from_name: 'Pronta e Limpa - Website',
+              message: `Recebeu um novo pedido de orçamento:\n\nNome: ${formData.name}\nTelefone: ${formData.phone}\nE-mail: ${formData.email}\nServiço(s): ${formData.services.join(', ')}\nLocalidade: ${formData.location}\n\nDetalhes adicionais podem ser consultados no seu painel de gestão.`,
+            })
+          });
+        } catch (emailError) {
+          console.error("Error sending email notification:", emailError);
+          // Don't throw here, as the main submission to Supabase succeeded
+        }
+      }
+      
       navigate('/sucesso');
     } catch (error) {
       console.error("Error submitting quote:", error);
