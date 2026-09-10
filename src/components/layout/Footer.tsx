@@ -17,7 +17,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-neutral-400 max-w-xs">
-              Limpeza profissional para casas, empresas e espaços no Norte de Portugal.
+              Limpeza profissional para casas, empresas e espaços no Norte e Centro de Portugal.
             </p>
           </div>
 
@@ -37,17 +37,19 @@ export function Footer() {
           </div>
 
           {/* Áreas */}
-          <div>
-            <h3 className="text-white font-semibold mb-6">Áreas</h3>
-            <ul className="space-y-3 text-sm grid grid-cols-2 gap-x-4">
-              {businessConfig.serviceAreas.map((area) => (
-                <li key={area.slug}>
-                  <Link to={`/${area.slug}`} className="hover:text-white transition-colors">
-                    {area.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div id="areas">
+            <h3 className="text-white font-semibold mb-6">Áreas de Atuação</h3>
+            <div className="text-sm text-neutral-400 leading-relaxed space-y-2">
+              <p>
+                Atuamos em <strong>todo o distrito do Porto e de Aveiro</strong>.
+              </p>
+              <p>
+                A nossa cobertura abrange todas as cidades, vilas e aldeias destas regiões.
+              </p>
+              <Link to="/areas-de-atuacao" className="inline-block mt-4 text-white font-medium hover:text-blue-400 transition-colors">
+                Ver lista completa de cidades &rarr;
+              </Link>
+            </div>
           </div>
 
           {/* Contacto */}

@@ -2,7 +2,6 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout/Layout";
 import { Home } from "./pages/Home";
@@ -15,6 +14,7 @@ import { Contacts } from "./pages/Contacts";
 import { Legal } from "./pages/Legal";
 import { LandingPage } from "./pages/LandingPage";
 import { Admin } from "./pages/Admin";
+import { Areas } from "./pages/Areas";
 
 export default function App() {
   return (
@@ -29,6 +29,7 @@ export default function App() {
           <Route path="perguntas-frequentes" element={<FAQ />} />
           <Route path="contactos" element={<Contacts />} />
           <Route path="admin" element={<Admin />} />
+          <Route path="areas-de-atuacao" element={<Areas />} />
           
           <Route path="politica-de-privacidade" element={<Legal type="privacy" />} />
           <Route path="termos-e-condicoes" element={<Legal type="terms" />} />

@@ -26,7 +26,7 @@ export function Header() {
     { name: "Início", path: "/" },
     { name: "Serviços", path: "/servicos" },
     { name: "Como funciona", path: "/#como-funciona" },
-    { name: "Áreas de atuação", path: "/#areas" },
+    { name: "Áreas de atuação", path: "/areas-de-atuacao" },
     { name: "Sobre nós", path: "/sobre-nos" },
     { name: "FAQ", path: "/perguntas-frequentes" },
     { name: "Contactos", path: "/contactos" },
